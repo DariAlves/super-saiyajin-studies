@@ -1,6 +1,7 @@
 # Super Saiyajin Studies
+
 <p align="center">
-  <img width="400" src="https://i.pinimg.com/564x/27/20/23/272023bc93aac98bcf6c107938631ffe.jpg" />
+  <img src="/images/super-saiyajin.jpg" width="400">
 </p>
 <hr />
 
@@ -14,8 +15,8 @@
     - addEventListener - click;
 - [ ] 02 - Change Color - Range
   - Html
-    - input type="range"; 
+    - input type="range";
   - Javascript
-    -  querySelector;
-    -  addEventListener - change
-- [ ] 03 - 
+    - querySelector;
+    - addEventListener - change
+- [ ] 03 -
