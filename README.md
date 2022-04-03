@@ -5,7 +5,7 @@
 </p>
 <hr />
 
-- [ ] 01 - Porcentagem
+- [x] 01 - Porcentagem
   - Html
   - Css
     - display: flex;
