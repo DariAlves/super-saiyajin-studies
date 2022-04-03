@@ -14,9 +14,11 @@
     - getElementById;
     - addEventListener - click;
 - [ ] 02 - Change Color - Range
+  - DOM (Document Object Model)  
   - Html
     - input type="range";
   - Javascript
     - querySelector;
-    - addEventListener - change
+    - addEventListener - change;
+    - addEventListener - input;  
 - [ ] 03 -
