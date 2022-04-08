@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Média dos alunos</title>
+
+    <style>
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .container {
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>Média dos alunos</h1>
+
+        <p>
+          <label>1ª Nota <input type="text" id="nota-1" /></label>
+        </p>
+        <p>
+          <label>2ª Nota <input type="text" id="nota-2" /></label>
+        </p>
+        <p>
+          <label>3ª Nota <input type="text" id="nota-3" /></label>
+        </p>
+        <p>
+          <label>4ª Nota <input type="text" id="nota-4" /></label>
+        </p>
+      </div>
+      <button id="botao">Exibir Média</button>
+      <h3 id="media-do-aluno">Média do Aluno:</h3>
+      <h3 id="resultado"></h3>
+    </div>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+  </body>
+</html>
