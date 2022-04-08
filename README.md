@@ -13,7 +13,7 @@
   - Javascript (DOM)
     - getElementById;
     - addEventListener - click;
-- [ ] 02 - Change Color - Range
+- [x] 02 - Change Color - Range
   - DOM (Document Object Model)  
   - Html
     - input type="range";
