@@ -1,0 +1,105 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  min-height: 100vh;
+  background: rgba(238, 238, 238, 0.963);
+  /* max-width: 1240px; */
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cards */
+.cards {
+  padding: 50px 0 0 0;
+  max-width: 1240px;
+  width: 100%;
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  box-shadow: 1px 5px 10px #777;
+  border-radius: 10px;
+  margin-bottom: 50px;
+
+  /* Position relative  para trabalhar com o background */
+  position: relative;
+  z-index: 1;
+}
+
+.card img {
+  width: 50%;
+  height: 300px;
+  box-shadow: 1px 5px 15px #000;
+  border-radius: 10px;
+}
+
+.card img,
+h2,
+p {
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.card p {
+  text-align: justify;
+  line-height: 1.5em;
+  padding: 0 35px;
+}
+
+/* Background */
+.background {
+  position: absolute;
+  height: 300px;
+  top: -21px;
+  right: 74px;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Span */
+span {
+  font-weight: bold;
+}
+
+/* Span Yusuke */
+span:nth-of-type(1) {
+  color: #1f8c79;
+}
+
+/* Span Kuwabara */
+span:nth-of-type(2) {
+  color: #1a77b9;
+}
+
+/* Span Kurama */
+span:nth-of-type(3) {
+  color: #d75a90;
+}
+
+/* Span Hiei */
+span:nth-of-type(4) {
+  color: #727097;
+}
