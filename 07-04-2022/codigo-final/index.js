@@ -4,12 +4,18 @@ const botao = document.getElementById('botao');
 const mediaDosAlunos = document.getElementById('media-do-aluno');
 const resultado = document.getElementById('resultado');
 
+// botao.addEventListener('click', () => {
+//   console.log(inputs);
+// });
+
 botao.addEventListener('click', () => {
   let somaValores = 0;
   inputs.forEach(input => {
     let valor = Number(input.value.replace(',', '.')); // OBS -> 1
     somaValores += valor;
     input.value = '';
+
+    // console.log(input);
   });
 
   const media = somaValores / inputs.length;
