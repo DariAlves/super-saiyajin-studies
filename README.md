@@ -5,20 +5,3 @@
 </p>
 <hr />
 
-- [x] 01 - Porcentagem
-  - Html
-  - Css
-    - display: flex;
-    - box-sizing: border-box;
-  - Javascript (DOM)
-    - getElementById;
-    - addEventListener - click;
-- [x] 02 - Change Color - Range
-  - DOM (Document Object Model)  
-  - Html
-    - input type="range";
-  - Javascript
-    - querySelector;
-    - addEventListener - change;
-    - addEventListener - input;  
-- [ ] 03 -
