@@ -43,6 +43,19 @@ app.put('/superheroes/:id', (request, response) => {
   return response.json(superheroes[indexSuperhero]);
 });
 
+// ! Delete
+app.delete('/superheroes/:id', (request, response) => {
+  const { id } = request.params;
+
+  const indexSuperhero = superheroes.findIndex(
+    superhero => superhero.id === id
+  );
+
+  superheroes.splice(indexSuperhero, 1);
+
+  return response.status(204).send();
+});
+
 app.listen(port, () => {
   console.log(`🚀 Server running on port ${port} 🚀`);
 });
