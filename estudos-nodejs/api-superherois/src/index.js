@@ -24,6 +24,11 @@ app.post('/superheroes', (request, response) => {
   return response.status(201).json(superhero);
 });
 
+// ! Read
+app.get('/superheroes', (request, response) => {
+  return response.json(superheroes);
+});
+
 app.listen(port, () => {
   console.log(`🚀 Server running on port ${port} 🚀`);
 });
