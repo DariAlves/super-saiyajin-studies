@@ -10,3 +10,12 @@ content-type: application/json
 
 GET http://localhost:3030/superheroes HTTP/1.1
 
+################################
+
+PUT http://localhost:3030/superheroes/f72b2b8c-64e2-47e1-a046-faaad1eedbf0 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Bruce Thomas Wayne",
+  "alias": "Batman"
+}

@@ -29,6 +29,20 @@ app.get('/superheroes', (request, response) => {
   return response.json(superheroes);
 });
 
+// ! Update
+app.put('/superheroes/:id', (request, response) => {
+  const { id } = request.params;
+  const { name, alias } = request.body;
+
+  const indexSuperhero = superheroes.findIndex(
+    superhero => superhero.id === id
+  );
+
+  superheroes[indexSuperhero] = { id, name, alias };
+
+  return response.json(superheroes[indexSuperhero]);
+});
+
 app.listen(port, () => {
   console.log(`🚀 Server running on port ${port} 🚀`);
 });
