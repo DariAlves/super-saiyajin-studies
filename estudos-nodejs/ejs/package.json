@@ -1,0 +1,19 @@
+{
+  "name": "ejs",
+  "version": "1.0.0",
+  "description": "- [ ] Iniciar projeto (npm init -y) - Instalar dependências - [ ] express (npm install express) - [ ] nodemon (npm install nodemon -D) - [ ] ejs (npm install ejs) - [ ] Criar um arquivo **_.gitignore_** e passar a pasta **node_modules/** - [ ] Na raiz do projeto criar o arquivo **_app.js_**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
