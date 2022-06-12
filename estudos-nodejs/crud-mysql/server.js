@@ -35,6 +35,51 @@ app.post('/usuario', (request, response) => {
   });
 });
 
+//! Listar todos usuários
+app.get('/usuarios', (request, response) => {
+  myPool.getConnection((err, connection) => {
+    if (err) throw err;
+
+    console.log(`Conectado!! 😎`);
+
+    connection.query('SELECT * FROM usuario', (err, usuarios) => {
+      connection.release(); // Devolve a minha conexão para a pool.
+
+      if (err) throw err;
+
+      return response.render('usuarios', { usuarios });
+    });
+  });
+});
+
+//! Listar um usuário específico
+app.get('/usuario/:id', (request, response) => {
+  myPool.getConnection((err, connection) => {
+    if (err) throw err;
+
+    console.log(`Conectado!! 😎`);
+
+    const { id } = request.params;
+
+    connection.query(
+      'SELECT * FROM usuario WHERE id = ?',
+      id,
+      (err, usuario) => {
+        connection.release(); // Devolve a minha conexão para a pool.
+
+        if (err) throw err;
+
+        return response.render('usuario', { usuario: usuario[0] });
+      }
+    );
+  });
+});
+
+//! index
+app.get('/', (request, response) => {
+  return response.render('index');
+});
+
 app.listen(port, () => {
   console.log(`Server running on ${port}`);
 });

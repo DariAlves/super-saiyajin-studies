@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Listar Usuários</h1>
+
+    <nav>
+      <a href="/">&#8592; Voltar</a>
+    </nav>
+
+    <% if (!usuarios.length) { %>
+    <h3>Usuários não encontrados</h3>
+    <% } else { %> <% usuarios.forEach(usuario => { %>
+    <div>
+      <p>#<%- usuario.id %></p>
+      <p>Nome: <%- usuario.nome %></p>
+      <p>Idade: <%- usuario.idade %></p>
+      <p>Email: <%- usuario.email %></p>
+      <a href="/usuario/<%- usuario.id %> ">Descrição</a>
+    </div>
+    <% }) %> <% } %>
+  </body>
+</html>

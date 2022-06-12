@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <% if (user === undefined) { %>
+    <h1>Usuário não encontrado</h1>
+    <a href="/">&#8592; Voltar</a>
+    <% } else { %>
+    <h1>Usuário <%- user.id %></h1>
+    <p>Nome: <%- user.nome %></p>
+    <a href="/">&#8592; Voltar</a>
+    <% } %>
+  </body>
+</html>
