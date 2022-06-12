@@ -1,5 +1,7 @@
 // 01 - Welcome to the City
 
+// link: https://www.codewars.com/kata/5302d846be2a9189af0001e4/train/javascript
+
 // input: sayHello(['John', 'Smith'], 'Phoenix', 'Arizona');
 
 // output: Hello, John Smith! Welcome to Phoenix, Arizona!
@@ -15,4 +17,3 @@ const adriana = ['Adriana', 'Larusso'];
 
 console.log(sayHello(felipe, 'Rio de Janeiro', 'RJ'));
 console.log(sayHello(adriana, 'São Paulo', 'SP'));
-
