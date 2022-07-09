@@ -29,28 +29,47 @@ async function getPokemon(url) {
 
 getPokemon(url);
 
-function showPokemon(data) {
+/* Pokemons aparecem na ordem sequencial */
+async function showPokemon(data) {
   // Limpar dados antes de voltar a exibir os novos
   div.innerHTML = '';
 
-  data.results.forEach(async pokemon => {
-    const response = await fetch(pokemon.url);
-    const data = await response.json();
+  // console.log(data);
 
+  const pokemons = [];
+
+  const arrayLength = data.results.length;
+
+  for (let i = 0; i < arrayLength; i++) {
+    // Recebo a url
+    const url = data.results[i].url;
+    // console.log(url);
+    // Faço o fetch de cada uma das urls
+    const response = await fetch(url);
+    // Converto o resultado em json
+    const pokemon = await response.json();
+
+    // console.log(pokemon);
+
+    pokemons.push(pokemon);
+  }
+
+  pokemons.map(pokemon => {
     const pokeInfo = {
-      id: data.id,
-      nome: data.name,
-      imagem: data.sprites.other['official-artwork'].front_default,
-      tipos: data.types.map(type => type.type.name),
-      color: data.types.map(type => type.type.name)[0],
+      id: pokemon.id,
+      nome: pokemon.name,
+      imagem: pokemon.sprites.other['official-artwork'].front_default,
+      tipos: pokemon.types.map(type => type.type.name),
+      color: pokemon.types.map(type => type.type.name)[0],
     };
 
     div.innerHTML += `
+
       <div class="${pokeInfo.color}">
       <h2>${pokeInfo.id} - ${pokeInfo.nome}</h2>
       <img src="${pokeInfo.imagem}" />
       <p>Tipo: </p>
-      <ol> 
+      <ol>
         <li>${pokeInfo.tipos.join('</li><li>')}</li>
       </ol>
       </div>
@@ -67,3 +86,33 @@ prev.addEventListener('click', () => {
   getPokemon(prev.getAttribute('data-url'));
   console.log(prev.getAttribute('data-url'));
 });
+
+/* Primeiro código */
+// function showPokemon(data) {
+//   // Limpar dados antes de voltar a exibir os novos
+//   div.innerHTML = '';
+
+//   data.results.forEach(async pokemon => {
+//     const response = await fetch(pokemon.url);
+//     const data = await response.json();
+
+//     const pokeInfo = {
+//       id: data.id,
+//       nome: data.name,
+//       imagem: data.sprites.other['official-artwork'].front_default,
+//       tipos: data.types.map(type => type.type.name),
+//       color: data.types.map(type => type.type.name)[0],
+//     };
+
+//     div.innerHTML += `
+//       <div class="${pokeInfo.color}">
+//       <h2>${pokeInfo.id} - ${pokeInfo.nome}</h2>
+//       <img src="${pokeInfo.imagem}" />
+//       <p>Tipo: </p>
+//       <ol>
+//         <li>${pokeInfo.tipos.join('</li><li>')}</li>
+//       </ol>
+//       </div>
+//     `;
+//   });
+// }
