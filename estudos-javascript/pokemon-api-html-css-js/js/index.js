@@ -68,10 +68,9 @@ async function showPokemon(data) {
       <div class="${pokeInfo.color}">
       <h2>${pokeInfo.id} - ${pokeInfo.nome}</h2>
       <img src="${pokeInfo.imagem}" />
-      <p>Tipo: </p>
-      <ol>
+      <ul>
         <li>${pokeInfo.tipos.join('</li><li>')}</li>
-      </ol>
+      </ul>
       </div>
     `;
   });
